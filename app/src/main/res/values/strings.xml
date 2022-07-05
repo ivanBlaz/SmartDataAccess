@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SmartDataAccess</string>
+
+    <integer-array name="smartLines">
+        <item>@layout/line_dog</item>
+    </integer-array>
 </resources>

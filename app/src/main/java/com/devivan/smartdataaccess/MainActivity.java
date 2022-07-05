@@ -1,14 +1,14 @@
 package com.devivan.smartdataaccess;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.devivan.smartdataaccess.Smart.Controllers.SmartActivity;
+
+public class MainActivity extends SmartActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setSmartContentView(R.layout.activity_main, R.id.clSmartLayout);
     }
 }
