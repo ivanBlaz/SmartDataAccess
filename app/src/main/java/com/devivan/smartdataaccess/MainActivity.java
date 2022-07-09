@@ -9,6 +9,6 @@ public class MainActivity extends SmartActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setSmartContentView(R.layout.activity_main, R.id.clSmartLayout);
+        setSmartContentView(R.layout.activity_main, R.array.smartLines, R.id.clSmartLayout);
     }
 }

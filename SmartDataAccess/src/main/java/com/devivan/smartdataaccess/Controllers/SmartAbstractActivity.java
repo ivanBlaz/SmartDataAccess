@@ -1,4 +1,4 @@
-package com.devivan.smartdataaccess.Smart.Controllers;
+package com.devivan.smartdataaccess.Controllers;
 
 import android.annotation.SuppressLint;
 import android.content.res.TypedArray;
@@ -16,9 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.devivan.smartdataaccess.R;
-import com.devivan.smartdataaccess.Smart.Beans.SmartBean;
-import com.devivan.smartdataaccess.Smart.Adapters.RecyclerViewAdapter;
-import com.devivan.smartdataaccess.Smart.DAO.SQLiteUtil;
+import com.devivan.smartdataaccess.Beans.SmartBean;
+import com.devivan.smartdataaccess.Adapters.RecyclerViewAdapter;
+import com.devivan.smartdataaccess.DAO.SQLiteUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
