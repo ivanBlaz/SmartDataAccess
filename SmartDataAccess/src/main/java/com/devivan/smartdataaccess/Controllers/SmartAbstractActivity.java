@@ -52,10 +52,8 @@ public abstract class SmartAbstractActivity extends AppCompatActivity {
     }
 
     protected void bindDataToView() {
-        for (View view : smartViews) {
-            findViews(view);
-            getData();
-        }
+        for (View view : smartViews) findViews(view);
+        getData();
     }
 
     protected String getKey(View view) {
@@ -109,7 +107,7 @@ public abstract class SmartAbstractActivity extends AppCompatActivity {
 
     protected void displayData(View view) {
         String key = getKey(view);
-        if ((isButton(view) || isImageView(view)) && key.split(SEPARATOR).length == 2) { // Button
+        if ((isButton(view) || isImageView(view)) && key.split(SEPARATOR).length == 2) { // Button | ImageView
             String action = key.split(SEPARATOR)[0];
             String bean = key.split(SEPARATOR)[1];
             if (INSERT.equals(action)) {
@@ -129,7 +127,7 @@ public abstract class SmartAbstractActivity extends AppCompatActivity {
                 });
             }
         }
-        else if (isRecyclerView(view) && key.split(SEPARATOR).length == 2) {
+        else if (isRecyclerView(view) && key.split(SEPARATOR).length == 2) { // RecyclerView
             RecyclerView recyclerView = (RecyclerView) view;
             listRecyclerViews.add(recyclerView);
             String bean = key.split(SEPARATOR)[1];
@@ -167,7 +165,7 @@ public abstract class SmartAbstractActivity extends AppCompatActivity {
     protected void bind(View view) {
         displayData(view);
         String key = getKey(view);
-        if (view instanceof EditText) {
+        if (view instanceof EditText) { // EditText
             EditText editText = (EditText) view;
             editText.addTextChangedListener(new TextWatcher() {
                 @Override
@@ -226,7 +224,7 @@ public abstract class SmartAbstractActivity extends AppCompatActivity {
 
                 }
             });
-        } else if (view instanceof TextView) {
+        } else if (view instanceof TextView) { // TextView
             if  (key.split(SEPARATOR).length == 2) {
                 String bean = key.split(SEPARATOR)[0];
                 String action = key.split(SEPARATOR)[1];

@@ -7,9 +7,4 @@ public class SmartActivity extends SmartAbstractActivity {
         super.onResume();
         bindDataToView();
     }
-
-    @Override
-    public void recreate() {
-        super.recreate();
-    }
 }

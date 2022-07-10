@@ -21,8 +21,7 @@ public class SQLiteUtil {
     public static SQLiteConnection connection;
 
     public static void connect(Context context) {
-        if (connection == null)
-            connection = new SQLiteConnection(context, DB_NAME, null, DB_VERSION);
+        if (connection == null) connection = new SQLiteConnection(context, DB_NAME, null, DB_VERSION);
     }
 
     public static void disconnect() {
