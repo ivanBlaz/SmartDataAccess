@@ -39,7 +39,7 @@ public abstract class SmartAbstractActivity extends AppCompatActivity {
     // Constants //
 
     // Lists //
-    TypedArray smartLines = null;
+    protected TypedArray smartLines = null;
     protected List<View> smartViews = new ArrayList<>();
     protected List<View> listViews = new ArrayList<>();
     protected List<RecyclerView> listRecyclerViews = new ArrayList<>();
